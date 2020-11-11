@@ -313,4 +313,7 @@ cc.Class({
             }
         }
     },
+    openPrivateUrl(){
+        cc.sys.openURL('http://kllx.5v5.com/private.html');
+    }
 });
