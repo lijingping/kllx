@@ -1,0 +1,20 @@
+{
+  "platform": "android",
+  "actualPlatform": "android",
+  "template": "default",
+  "buildPath": "./build",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "keystorePath": "",
+  "keystorePassword": "",
+  "keystoreAlias": "",
+  "keystoreAliasPassword": "",
+  "apiLevel": "android-28",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false
+}

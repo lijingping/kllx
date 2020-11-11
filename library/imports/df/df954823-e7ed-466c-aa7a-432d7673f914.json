@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_shuanbf",
+    "texture": "39d23f7e-3cbd-413a-a9fc-a4a8ff986bbe",
+    "atlas": "",
+    "rect": [
+      7,
+      0,
+      153,
+      169
+    ],
+    "offset": [
+      -1.5,
+      0.5
+    ],
+    "originalSize": [
+      170,
+      170
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

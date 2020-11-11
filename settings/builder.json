@@ -1,0 +1,66 @@
+{
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "packageName": "org.cocos2d.demo",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "encryptJs": true,
+  "excludeScenes": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": true,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "startScene": "f2475a86-e50d-44fc-a09a-41bf7562e572",
+  "title": "happydaily",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "https://cdn.heidong.fun/gameres/t3/p1/release/killmonster",
+    "appid": "wx54a8976f0e7b431c",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": "subdomine"
+  },
+  "xxteaKey": "4b32b262-bb57-41",
+  "zipCompressJs": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "nativeMd5Cache": true,
+  "android": {
+    "REMOTE_SERVER_ROOT": "",
+    "packageName": "com.tencent.tmgp.kllx"
+  },
+  "ios": {
+    "REMOTE_SERVER_ROOT": "",
+    "packageName": "com.rydj.kllx.wyj"
+  },
+  "mac": {
+    "REMOTE_SERVER_ROOT": "",
+    "height": 720,
+    "packageName": "org.cocos2d.demo",
+    "width": 1280
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "height": 720,
+    "width": 1280
+  },
+  "appBundle": false
+}

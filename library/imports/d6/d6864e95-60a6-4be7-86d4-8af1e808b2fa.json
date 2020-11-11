@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_yinx",
+    "texture": "2d18577a-69a6-4cdb-813b-ccd24936d635",
+    "atlas": "",
+    "rect": [
+      8,
+      0,
+      153,
+      166
+    ],
+    "offset": [
+      -0.5,
+      2
+    ],
+    "originalSize": [
+      170,
+      170
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

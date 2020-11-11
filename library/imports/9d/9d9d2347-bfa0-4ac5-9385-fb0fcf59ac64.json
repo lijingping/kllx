@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_zhongjz",
+    "texture": "0b5ec2cd-1db1-49f0-85e4-3a1852c140bf",
+    "atlas": "",
+    "rect": [
+      8,
+      0,
+      153,
+      170
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      170,
+      170
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

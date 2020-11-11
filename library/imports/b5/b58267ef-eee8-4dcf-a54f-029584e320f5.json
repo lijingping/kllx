@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_kllx",
+    "texture": "1298a7c5-7f3d-47e4-b611-106326d81f5d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      549,
+      329
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      549,
+      329
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

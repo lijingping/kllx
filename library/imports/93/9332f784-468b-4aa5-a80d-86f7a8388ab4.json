@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_duanw",
+    "texture": "be39866a-fff5-48a3-b1de-2cc6f4de580a",
+    "atlas": "",
+    "rect": [
+      8,
+      1,
+      153,
+      167
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      170,
+      170
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

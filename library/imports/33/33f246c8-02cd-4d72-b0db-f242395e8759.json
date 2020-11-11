@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_huanyp",
+    "texture": "355e7649-681d-4abc-b36c-7532453cd486",
+    "atlas": "",
+    "rect": [
+      7,
+      0,
+      153,
+      168
+    ],
+    "offset": [
+      -1.5,
+      1
+    ],
+    "originalSize": [
+      170,
+      170
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
