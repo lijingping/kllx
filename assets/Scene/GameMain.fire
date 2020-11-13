@@ -218,7 +218,7 @@
       "array": [
         0,
         0,
-        272.7980021920982,
+        504.37860782283076,
         0,
         0,
         0,
@@ -13881,7 +13881,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 139.34,
+      "width": 128.4,
       "height": 75.6
     },
     "_anchorPoint": {
@@ -14692,7 +14692,7 @@
       "__id__": 300
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 314
@@ -14917,14 +14917,14 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 195,
+      "g": 12,
+      "b": 12,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
+      "width": 160,
       "height": 63
     },
     "_anchorPoint": {
@@ -14936,8 +14936,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
-        -511,
+        -204.874,
+        -124.974,
         0,
         0,
         0,
@@ -15053,8 +15053,8 @@
     "target": {
       "__id__": 2
     },
-    "component": "GameMain",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "e108aAONHJBsKqEpmBpBRLe",
     "handler": "onKeepGoing",
     "customEventData": ""
   },
@@ -15073,8 +15073,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "点击继续>>",
-    "_N$string": "点击继续>>",
+    "_string": "点击不要",
+    "_N$string": "点击不要",
     "_fontSize": 40,
     "_lineHeight": 50,
     "_enableWrapText": true,
@@ -15099,28 +15099,28 @@
       "__id__": 300
     },
     "_children": [],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 323
       },
       {
-        "__id__": 324
+        "__id__": 325
       }
     ],
     "_prefab": null,
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 235,
+      "g": 189,
+      "b": 27,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 422,
-      "height": 181
+      "width": 160,
+      "height": 63
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -15131,8 +15131,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
-        -338,
+        197.439,
+        -85.737,
         0,
         0,
         0,
@@ -15158,40 +15158,6 @@
     "_id": "15cr/6k9xDGZqvChh03H4F"
   },
   {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 322
-    },
-    "_enabled": true,
-    "_materials": [
-      {
-        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-      }
-    ],
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "4d4120e3-aafc-468b-94a1-805410da13a7"
-    },
-    "_type": 1,
-    "_sizeMode": 2,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_atlas": {
-      "__uuid__": "5cc7b808-227d-4efb-9baf-78e30b151df1"
-    },
-    "_id": "9apsJnLONIPbdEYapOUSUT"
-  },
-  {
     "__type__": "cc.Button",
     "_name": "",
     "_objFlags": 0,
@@ -15205,7 +15171,7 @@
     "zoomScale": 0.9,
     "clickEvents": [
       {
-        "__id__": 325
+        "__id__": 324
       }
     ],
     "_N$interactable": true,
@@ -15286,6 +15252,39 @@
     "customEventData": "2"
   },
   {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 322
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_string": "点击我要",
+    "_N$string": "点击我要",
+    "_fontSize": 40,
+    "_lineHeight": 50,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_batchAsBitmap": false,
+    "_styleFlags": 0,
+    "_underlineHeight": 0,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "黑体",
+    "_N$overflow": 0,
+    "_N$cacheMode": 0,
+    "_id": "dcDAW8yZVHl5Xb3Szzudtm"
+  },
+  {
     "__type__": "cc.Node",
     "_name": "l_text",
     "_objFlags": 0,
@@ -15313,7 +15312,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 256.65999999999997,
+      "width": 257.45,
       "height": 77.6
     },
     "_anchorPoint": {
@@ -15326,7 +15325,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        -110,
+        12,
         0,
         0,
         0,

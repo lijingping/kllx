@@ -903,9 +903,9 @@ cc.Class({
             if (this._videonum <= 0) {
                 console.log('失败');
                 this.m_sp_monster.node.getComponent("MonsterItem").playMonsterVictory();
-                this.m_n_lookvideo.active = true;
-                this.m_n_lookvideo.scale = 0;
-                this.m_n_lookvideo.runAction(cc.sequence(cc.scaleTo(0.2, 1.2, 1.2).easing(cc.easeIn(3.0)), cc.scaleTo(0.1, 1, 1)));
+                // this.m_n_lookvideo.active = true;
+                // this.m_n_lookvideo.scale = 0;
+                // this.m_n_lookvideo.runAction(cc.sequence(cc.scaleTo(0.2, 1.2, 1.2).easing(cc.easeIn(3.0)), cc.scaleTo(0.1, 1, 1)));
                 if (window.firstvideo) {
                     this.m_l_asktype.string = "看视频换一批";
                 } else {
