@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": null,
     "_opacity": 255,
@@ -194,7 +194,7 @@
       "array": [
         0,
         0,
-        504.37860782283076,
+        504.0267850025433,
         0,
         0,
         0,
@@ -2795,7 +2795,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 649.8,
+      "width": 729.8,
       "height": 29.2
     },
     "_anchorPoint": {
@@ -2847,8 +2847,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "审批文号：新广出审[2016]2438号    出版物号：ISBN 978-7-7979-1008-8",
-    "_N$string": "审批文号：新广出审[2016]2438号    出版物号：ISBN 978-7-7979-1008-8",
+    "_string": "审批文号：新广出审[2016]2438号    网络游戏出版物号：ISBN 978-7-7979-1008-8",
+    "_N$string": "审批文号：新广出审[2016]2438号    网络游戏出版物号：ISBN 978-7-7979-1008-8",
     "_fontSize": 20,
     "_lineHeight": 20,
     "_enableWrapText": true,
@@ -2894,8 +2894,8 @@
     "alignMode": 1,
     "_target": null,
     "_alignFlags": 44,
-    "_left": -324.9,
-    "_right": -324.9,
+    "_left": -364.9,
+    "_right": -364.9,
     "_top": 0,
     "_bottom": -869.806,
     "_verticalCenter": 0,
@@ -3046,7 +3046,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "edGC2wr1JPD7mI9FEY7Kca"
+    "_id": "ca7Cd7AG5MtLT1DcTlWkKI"
   },
   {
     "__type__": "cc.Label",
@@ -3079,7 +3079,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "3eI/fyq5NChowETjrLrtDd"
+    "_id": "83SitmYrZGWq5FLQCP7/1V"
   },
   {
     "__type__": "cc.LabelOutline",
@@ -3097,7 +3097,7 @@
       "a": 255
     },
     "_width": 1,
-    "_id": "b6q3WpSrZMt7EW022W6G8O"
+    "_id": "c8FYF7Vn9N/5fkMO93wPLh"
   },
   {
     "__type__": "cc.Button",
@@ -6589,7 +6589,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 239.2,
+      "width": 230.95,
       "height": 85.6
     },
     "_anchorPoint": {
@@ -6807,7 +6807,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 167.5,
+      "width": 167.95,
       "height": 85.6
     },
     "_anchorPoint": {

@@ -218,7 +218,7 @@
       "array": [
         0,
         0,
-        504.37860782283076,
+        502.29473419497447,
         0,
         0,
         0,
@@ -8956,7 +8956,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 223.46,
+      "width": 224,
       "height": 63
     },
     "_anchorPoint": {
@@ -9153,7 +9153,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 223.46,
+      "width": 224,
       "height": 63
     },
     "_anchorPoint": {
@@ -9350,7 +9350,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 223.46,
+      "width": 224,
       "height": 63
     },
     "_anchorPoint": {
@@ -9547,7 +9547,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 223.46,
+      "width": 224,
       "height": 63
     },
     "_anchorPoint": {
@@ -11820,7 +11820,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 344.75,
+      "width": 347.32,
       "height": 69
     },
     "_anchorPoint": {
@@ -12906,7 +12906,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 250,
+      "width": 200,
       "height": 75.6
     },
     "_anchorPoint": {
@@ -12918,7 +12918,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -20,
+        0,
         -244,
         0,
         0,
@@ -13055,8 +13055,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "点击跳过>>",
-    "_N$string": "点击跳过>>",
+    "_string": "点击跳过",
+    "_N$string": "点击跳过",
     "_fontSize": 50,
     "_lineHeight": 60,
     "_enableWrapText": true,
@@ -13066,8 +13066,8 @@
     "_batchAsBitmap": false,
     "_styleFlags": 0,
     "_underlineHeight": 0,
-    "_N$horizontalAlign": 0,
-    "_N$verticalAlign": 0,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
     "_N$fontFamily": "黑体",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
@@ -13466,7 +13466,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        59,
+        11,
         0,
         0,
         0,
@@ -13550,7 +13550,7 @@
       "__id__": 284
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 289
@@ -13667,7 +13667,7 @@
       "__id__": 284
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 292
@@ -13848,8 +13848,8 @@
     "target": {
       "__id__": 2
     },
-    "component": "GameMain",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "e108aAONHJBsKqEpmBpBRLe",
     "handler": "onAdBtnClick",
     "customEventData": "3"
   },
@@ -13881,7 +13881,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 128.4,
+      "width": 58.28,
       "height": 75.6
     },
     "_anchorPoint": {
@@ -13894,7 +13894,7 @@
       "ctor": "Float64Array",
       "array": [
         -15,
-        -648,
+        -369,
         0,
         0,
         0,
@@ -14008,8 +14008,8 @@
     "target": {
       "__id__": 2
     },
-    "component": "GameMain",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "e108aAONHJBsKqEpmBpBRLe",
     "handler": "onCancelVideo",
     "customEventData": ""
   },
@@ -14028,8 +14028,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "算了>>",
-    "_N$string": "算了>>",
+    "_string": "OK",
+    "_N$string": "OK",
     "_fontSize": 40,
     "_lineHeight": 60,
     "_enableWrapText": true,
@@ -14039,8 +14039,8 @@
     "_batchAsBitmap": false,
     "_styleFlags": 0,
     "_underlineHeight": 0,
-    "_N$horizontalAlign": 0,
-    "_N$verticalAlign": 0,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
     "_N$fontFamily": "微软雅黑",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
@@ -16204,8 +16204,8 @@
     "target": {
       "__id__": 329
     },
-    "component": "GetBoxGiftItem",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "30339KHDKlNjZMtkkI4Lrhs",
     "handler": "onClose",
     "customEventData": ""
   },
@@ -16398,8 +16398,8 @@
     "target": {
       "__id__": 329
     },
-    "component": "GetBoxGiftItem",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "30339KHDKlNjZMtkkI4Lrhs",
     "handler": "onFreeGet",
     "customEventData": ""
   },
@@ -16411,7 +16411,7 @@
       "__id__": 329
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 351
@@ -16592,8 +16592,8 @@
     "target": {
       "__id__": 329
     },
-    "component": "GetBoxGiftItem",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "30339KHDKlNjZMtkkI4Lrhs",
     "handler": "onShareGet",
     "customEventData": ""
   },
