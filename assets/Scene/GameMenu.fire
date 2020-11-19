@@ -194,7 +194,7 @@
       "array": [
         0,
         0,
-        504.0267850025433,
+        502.29473419497447,
         0,
         0,
         0,
@@ -3046,7 +3046,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "ca7Cd7AG5MtLT1DcTlWkKI"
+    "_id": "411xWLyCVASoO12s9Dz1P3"
   },
   {
     "__type__": "cc.Label",
@@ -3079,7 +3079,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "83SitmYrZGWq5FLQCP7/1V"
+    "_id": "baE1EMCrZGXIDKaLrlZV1c"
   },
   {
     "__type__": "cc.LabelOutline",
@@ -3097,7 +3097,7 @@
       "a": 255
     },
     "_width": 1,
-    "_id": "c8FYF7Vn9N/5fkMO93wPLh"
+    "_id": "45PTugIwtO7J2S/nuk5D/z"
   },
   {
     "__type__": "cc.Button",
@@ -3324,8 +3324,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "游戏著作权人：北京星动互联科技有限公司  出版单位：北京星动互联科技有限公司",
-    "_N$string": "游戏著作权人：北京星动互联科技有限公司  出版单位：北京星动互联科技有限公司",
+    "_string": "游戏著作权人：北京星动互联科技有限公司  出版单位：北京畅元国讯科技有限公司",
+    "_N$string": "游戏著作权人：北京星动互联科技有限公司  出版单位：北京畅元国讯科技有限公司",
     "_fontSize": 20,
     "_lineHeight": 20,
     "_enableWrapText": true,
