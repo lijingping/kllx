@@ -44,52 +44,10 @@ cc.Class({
     },
 
     onAdBtnClick(event, custom) {
-        if (typeof (wx) != 'undefined') {
-            let VersionToast = () => {
-                wx.showToast({
-                    title: "微信版本过低，无法看广告",
-                    icon: "none",
-                    image: "",
-                    duration: 0,
-                });
-                setTimeout(() => wx.hideToast(), 2000);
-            };
-            let info = wx.getSystemInfoSync();
-            if (info.SDKVersion >= '2.0.4') {
-                this.showAd(custom);
-            } else {
-                VersionToast();
-            }
-        } else {
-            // console.log('it is not wechat');
-            this.videoReward(custom);
-        }
+        this.videoReward(custom);
     },
 
     showAd(custom) {
-        let self = this;
-        if (!this.m_videoAd) {
-            this.m_videoAd = wx.createRewardedVideoAd({
-                adUnitId: 'adunit-e573e466be94d7f5'
-            });
-        }
-        this.m_videoAd.onError(err => {
-
-        });
-
-        this.m_videoAd.load()
-            .then(() => {
-                self.m_videoAd.show();
-                self.m_videoAd.onClose((status) => {
-                    self.m_videoAd.offClose();
-                    if (status && status.isEnded || status === undefined) {
-                        self.videoReward(custom);
-                    } else {
-
-                    }
-                });
-            })
-            .catch(err => Utils.showTipsText("拉去视频广告失败，请稍候重试", null, null, null, 60, cc.Color.BLACK, 1.2));
     },
 
     videoReward(custom) {

@@ -798,62 +798,11 @@ cc.Class({
     },
 
     onAdBtnClick(event, custom) {
-        if (typeof (wx) != 'undefined') {
-            if (!window.firstvideo && custom == 3) {
-                // window.CHANGE_BLOCK = 1;
-                // cc.sys.localStorage.setItem('change', '1');
-                window.firstvideo = true;
-                this.videoReward(1);
-                return;
-            }
-            let VersionToast = () => {
-                wx.showToast({
-                    title: "微信版本过低，无法看广告",
-                    icon: "none",
-                    image: "",
-                    duration: 0,
-                });
-                setTimeout(() => wx.hideToast(), 2000);
-            };
-            let info = wx.getSystemInfoSync();
-            if (info.SDKVersion >= '2.0.4') {
-                this.showAd(custom);
-            } else {
-                VersionToast();
-            }
-        } else {
-            console.log('it is not wechat');
-            this.videoReward(custom);
-        }
+        console.log('it is not wechat');
+        this.videoReward(custom);
     },
 
     showAd(custom) {
-        let self = this;
-        if (!this.m_videoAd) {
-            this.m_videoAd = wx.createRewardedVideoAd({
-                adUnitId: 'adunit-e573e466be94d7f5'
-            });
-        }
-        this.m_videoAd.onError(err => {
-            // Utils.showTipsText("error:" + err.errMsg);
-        });
-
-        this.m_videoAd.load()
-            .then(() => {
-                self.m_videoAd.show();
-                self.showAdb = true;
-                self.m_videoAd.onClose((status) => {
-                    self.m_videoAd.offClose();
-                    self.showAdb = false;
-                    self.showAdBanner(false);
-                    if (status && status.isEnded || status === undefined) {
-                        self.videoReward(custom);
-                    } else {
-
-                    }
-                });
-            })
-            .catch(err => Utils.showTipsText("拉去视频广告失败，请稍候重试", null, null, null, 60, cc.Color.BLACK, 1.2));
     },
 
     videoReward(custom) {
@@ -943,53 +892,11 @@ cc.Class({
     },
 
     onReliveBtnClick() {
-        if (typeof (wx) != 'undefined') {
-            let VersionToast = () => {
-                wx.showToast({
-                    title: "微信版本过低，无法看广告",
-                    icon: "none",
-                    image: "",
-                    duration: 0,
-                });
-                setTimeout(() => wx.hideToast(), 2000);
-            };
-            let info = wx.getSystemInfoSync();
-            if (info.SDKVersion >= '2.0.4') {
-                this.showReliveAd();
-            } else {
-                VersionToast();
-            }
-        } else {
-            console.log('it is not wechat');
-            this.onReliveGameVideo();
-        }
+        console.log('it is not wechat');
+        this.onReliveGameVideo();
     },
 
     showReliveAd() {
-        let self = this;
-        if (!this.m_videoAd2) {
-            this.m_videoAd2 = wx.createRewardedVideoAd({
-                adUnitId: 'adunit-5187ffc3ab571318'
-            });
-        }
-        this.m_videoAd2.onError(err => {
-            // Utils.showTipsText("error:" + err.errMsg);
-        });
-
-        this.m_videoAd2.load()
-            .then(() => {
-                self.m_videoAd2.show();
-                self.showAdBanner(false);
-                self.m_videoAd2.onClose((status) => {
-                    self.m_videoAd2.offClose();
-                    if (status && status.isEnded || status === undefined) {
-                        self.onReliveGameVideo();
-                    } else {
-
-                    }
-                });
-            })
-            .catch(err => Utils.showTipsText("视频拉取失败，请稍后重试", null, null, null, 60, cc.Color.BLACK, 1.2));
     },
 
     onNextLevel() {
@@ -1148,70 +1055,6 @@ cc.Class({
     },
 
     showAdBanner(boo) {
-        if (typeof (wx) == 'undefined') return;
-        let Size = cc.winSize
-
-        let Widthnode = cc.find("Canvas/n_funnymap/n_bannerpos");
-        var pos = this.node.convertToWorldSpace(Widthnode);
-
-        if (Size.height / Size.width > 2) {//适配全面屏 适用于FIXHeight
-            pos.y += (Size.height - 1920) / 2;
-        }
-
-        let system = wx.getSystemInfoSync();
-
-        let adaptScaleH = system.screenHeight / Size.height;
-        var PosY = ((Size.height - pos.y) * adaptScaleH);
-
-        let self = this;
-        if (this.m_bannerad) {
-            this.m_bannerad.destroy();
-            this.m_bannerad = null;
-        }
-        if (!this.m_bannerad && boo) {
-            if (system.SDKVersion < '2.0.4') {
-                wx.showToast({
-                    title: "微信版本过低，无法创建广告banner",
-                    icon: "none",
-                    image: "",
-                    duration: 0,
-                });
-                setTimeout(() => wx.hideToast(), 3000);
-            } else {
-                self.m_bannerad = wx.createBannerAd({
-                    adUnitId: 'adunit-9dd057b6b514245a',
-                    style: {
-                        left: 0,
-                        top: PosY,
-                        width: system.screenWidth,
-                    }
-                })
-                self.m_bannerad.onResize((res1) => {
-                    try {
-                        if (self.m_bannerad && self.m_bannerad.style) {
-
-                            self.m_bannerad.style.top = PosY;
-                            self.m_bannerad.style.height = res1.height;
-                        }
-                    } catch (error) {
-                        console.log("onResize-error", error);
-                    }
-                });
-                self.m_bannerad.onLoad(() => {
-                    // console.log('banner 广告加载成功')
-
-                })
-                self.m_bannerad.show().then(() => {
-                    // console.log("广告显示成功");
-                }).catch((err) => {
-                    // console.error("广告加载失败", err);
-                })
-                self.m_bannerad.onError(err => {
-                    // console.error(err)
-                })
-
-            }
-        }
     },
 
     onOpenAskPanel() {

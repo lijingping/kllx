@@ -94,34 +94,6 @@ var Utils = {
                 callback(data);
             }
         }
-        else {
-
-            const DB = wx.cloud.database({
-                config: {
-                    env: window.ENV,
-                }
-            })
-            DB.collection("todos").doc(window.userInfo.openId).get({
-                success: res => {
-                    console.log(res.data);
-                    if (!res.data.skin) res.data.skin = window.SKIN_CONFIG_STATE;
-                    window.INIT_GAME_SAVE_DATA = res.data;
-                    if (callback) {
-                        callback(window.INIT_GAME_SAVE_DATA);
-                    }
-                },
-                fail: (err) => {
-                    console.log("fail", err);
-                    window.need_add = true;
-                    if (callback) {
-                        callback(window.INIT_GAME_SAVE_DATA);
-                    }
-                },
-                complete: (res) => {
-                    // console.log("complete", err);
-                }
-            });
-        }
     },
 
     /**
@@ -132,42 +104,6 @@ var Utils = {
         if (window.GAME_SAVE_TYPE === 1) {
             // console.log("本地数据设置成功", JSON.stringify(window.INIT_GAME_SAVE_DATA));
             cc.sys.localStorage.setItem(window.GAME_SAVE_HANDLER, JSON.stringify(window.INIT_GAME_SAVE_DATA));
-        } else {
-            const DB = wx.cloud.database({
-                config: {
-                    env: window.ENV,
-                }
-            });
-            window.INIT_GAME_SAVE_DATA._id = window.userInfo.openId;
-            if (window.need_add) {
-                DB.collection("todos").add({
-                    data: window.INIT_GAME_SAVE_DATA,
-                    success: (res) => {
-                        // console.log(res, "add data good");
-                        window.need_add = false;
-                    },
-                    fail: (err) => {
-                        // console.log("fail ", err);
-                    }
-                })
-            } else {
-                DB.collection("todos").doc(window.userInfo.openId).update({
-                    data: {
-                        gold_num: window.INIT_GAME_SAVE_DATA.gold_num,
-                        login_time: window.INIT_GAME_SAVE_DATA.login_time,
-                        tool: window.INIT_GAME_SAVE_DATA.tool,
-                        top_level: window.INIT_GAME_SAVE_DATA.top_level,
-                        top_score: window.INIT_GAME_SAVE_DATA.top_score,
-                        skin: window.INIT_GAME_SAVE_DATA.skin,
-                    },
-                    success: (res) => {
-                        // console.log(res, "add data good");
-                    },
-                    fail: (err) => {
-                        // console.log("fail ", err);
-                    }
-                })
-            }
         }
     },
 

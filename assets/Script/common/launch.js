@@ -121,8 +121,6 @@ cc.Class({
 
     update(dt) {
         // this.ShowGroudRankClick();
-        if (typeof (wx) != "undefined")
-            this._updaetSubDomainCanvas();
     },
 
 

@@ -31,17 +31,6 @@ cc.Class({
 
         this.updateMusicBtnSprite(window.MUSIC_SHOW_OFF);
         RankList.setScore(window.INIT_GAME_SAVE_DATA.top_score);
-        if (typeof (wx) != "undefined") {
-            wx.showShareMenu({
-                withShareTicket: true,
-            });
-            wx.onShareAppMessage(() => {
-                return {
-                    title: "好玩又新奇，消磨时间好帮手",
-                    imageUrl: window.tempFileURL[1],
-                }
-            });
-        }
 
         this.showAdBanner(true);
         if (!window.SHOWNEWYEAR && window.NEWYEAR) {
@@ -136,11 +125,7 @@ cc.Class({
 
     onOpenStepRank() {
         Utils.SetSoundEffect(window.BUTTON_CLICK_MUSIC, false, 1);
-        if (window.isWeChatPlatform)
-            wx.showLoading({ title: "加载中..." });
         cc.director.loadScene(window.STEP_SCENE_NAME, () => {
-            if (window.isWeChatPlatform)
-                wx.hideLoading();
         })
     },
 
@@ -186,43 +171,10 @@ cc.Class({
     },
 
     onMoreGame() {
-        if (typeof (wx) != 'undefined' && wx.navigateToMiniProgram) {
-            wx.navigateToMiniProgram({
-                appId: "wx7109309214f4c86e",
-                //target: "wx6ee9cae077851dfa",
-                success: res => {
-                    console.log('跳转成功');
-                    // successs && successs(res);
-                },
-                fail: err => {
-                    console.log("跳转失败：", err);
-                    // faill && faill(err);
-                },
-                complete: res => {
-                    console.log('跳转完成')
-                    // completee && completee(res);
-                }
-            });
-        } else {
-            wxShortCut.showModal("提示", "暂未开放");
-        }
+        wxShortCut.showModal("提示", "暂未开放");
     },
 
     showGameClubButton() {
-        if (typeof (wx) != 'undefined') {
-            if (!this.clubbutton) {
-                this.clubbutton = wx.createGameClubButton({
-                    icon: 'light',
-                    style: {
-                        left: 10,
-                        top: 300,
-                        width: 40,
-                        height: 40
-                    }
-                });
-            }
-            this.clubbutton.show();
-        }
     },
     hideGameClubButton() {
         if (this.clubbutton) {
@@ -244,76 +196,8 @@ cc.Class({
     },
 
     showAdBanner(boo) {
-        if (typeof (wx) == 'undefined') return;
-        let Size = cc.winSize
-
-        let Widthnode = cc.find("Canvas/n_funnymap/n_bannerpos");
-        var pos = this.node.convertToWorldSpace(Widthnode);
-
-        if (Size.height / Size.width > 2) {//适配全面屏 适用于FIXHeight
-            pos.y += (Size.height - 1920) / 2;
-        }
-
-        let system = wx.getSystemInfoSync();
-
-        let adaptScaleH = system.screenHeight / Size.height;
-        var PosY = ((Size.height - pos.y) * adaptScaleH);
-
-        let self = this;
-        if (!boo) {
-            if (this.m_bannerad) {
-                this.m_bannerad.hide();
-            }
-        } else {
-            if (this.m_bannerad)
-                this.m_bannerad.show();
-        }
-        if (!this.m_bannerad && boo) {
-            if (system.SDKVersion < '2.0.4') {
-                wx.showToast({
-                    title: "微信版本过低，无法创建广告banner",
-                    icon: "none",
-                    image: "",
-                    duration: 0,
-                });
-                setTimeout(() => wx.hideToast(), 3000);
-            } else {
-                self.m_bannerad = wx.createBannerAd({
-                    adUnitId: 'adunit-9dd057b6b514245a',
-                    style: {
-                        left: 0,
-                        top: PosY,
-                        width: system.screenWidth,
-                    }
-                })
-                self.m_bannerad.onResize((res1) => {
-                    try {
-                        if (self.m_bannerad && self.m_bannerad.style) {
-
-                            self.m_bannerad.style.top = PosY;
-                            self.m_bannerad.style.height = res1.height;
-                        }
-                    } catch (error) {
-                        console.log("onResize-error", error);
-                    }
-                });
-                self.m_bannerad.onLoad(() => {
-                    console.log('banner 广告加载成功')
-
-                })
-                self.m_bannerad.show().then(() => {
-                    console.log("广告显示成功");
-                }).catch((err) => {
-                    console.error("广告加载失败", err);
-                })
-                self.m_bannerad.onError(err => {
-                    console.error(err)
-                })
-
-            }
-        }
     },
-    openPrivateUrl(){
-        cc.sys.openURL('http://kllx.5v5.com/private.html');
+    openPrivateUrl(even, custom){
+        cc.sys.openURL(custom);
     }
 });

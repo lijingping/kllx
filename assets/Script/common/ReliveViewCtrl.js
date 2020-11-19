@@ -120,10 +120,6 @@ cc.Class({
     ShareBtnClick: function () {
         this.unschedule(this.DeleteTimeNum);
 
-        if (!window.wx) {
-            // console.log("=================不是微信平台===========");
-            return;
-        }
         var self = this;
         if (this.callbackobj != null) {
             var shareObj = this.callbackobj.shareObj;

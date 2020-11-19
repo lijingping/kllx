@@ -1,13 +1,6 @@
 
 
 let netErrorToast = () => {
-    wx.showToast({
-        title: "联网超时",
-        icon: "none",
-        image: "",
-        duration: 0,
-    });
-    setTimeout(() => wx.hideToast(), 2000);
 };
 
 //被动转发（点击右上角转发菜单） 请勿重复注册回调事件，如不需要转发，请调用wx.hideShareMenu();

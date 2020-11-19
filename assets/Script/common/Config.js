@@ -1,6 +1,6 @@
 'use strict';
 window.isWeChatPlatform = (function () {
-    return typeof (wx) != "undefined";
+    return cc.sys.platform == cc.sys.WECHAT_GAME;
 })();
 
 //***********************基础配置相关***********************//

@@ -33,9 +33,6 @@ cc.Class({
     },
 
     update() {
-        if (typeof (wx) != "undefined")
-            this._updaetSubDomainCanvas();
-
     }
 
 });

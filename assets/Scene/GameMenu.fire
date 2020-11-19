@@ -194,7 +194,7 @@
       "array": [
         0,
         0,
-        502.29473419497447,
+        503.51258241904634,
         0,
         0,
         0,
@@ -3046,7 +3046,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "411xWLyCVASoO12s9Dz1P3"
+    "_id": "028S6hxPFEt5rKRcZC7NDs"
   },
   {
     "__type__": "cc.Label",
@@ -3079,7 +3079,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "baE1EMCrZGXIDKaLrlZV1c"
+    "_id": "e2qMQzRG1IDJtoOEqJ3vKB"
   },
   {
     "__type__": "cc.LabelOutline",
@@ -3097,7 +3097,7 @@
       "a": 255
     },
     "_width": 1,
-    "_id": "45PTugIwtO7J2S/nuk5D/z"
+    "_id": "3cFyiLo3pNpriiWWO1R7i9"
   },
   {
     "__type__": "cc.Button",
@@ -3191,7 +3191,7 @@
     "component": "",
     "_componentId": "5cb45NS+yZNLbHP815RF0Ab",
     "handler": "openPrivateUrl",
-    "customEventData": ""
+    "customEventData": "http://kllx.5v5.com/private.html"
   },
   {
     "__type__": "cc.RichText",

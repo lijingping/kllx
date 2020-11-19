@@ -9,20 +9,6 @@ var ShareSdk = {
      */
 
     setShareMenuEnabled(boo, withShareTicket) {
-        if (isWeChat) {
-            let withShare = withShareTicket ? true : false;
-            if (boo) {
-                wx.showShareMenu({
-                    withShareTicket: withShare,
-                });
-            }
-            else {
-                wx.hideShareMenu({
-                });
-            }
-        } else {
-            // console.log("it's not wechat platform. setShareMenuEnabled faied!");
-        }
     },
 
     /**
@@ -31,18 +17,13 @@ var ShareSdk = {
         * ShareOption-分享监听参数对象
         *  title		转发标题，不传则默认使用当前小游戏的昵称。	
         *   imageUrl	转发显示图片的链接，可以是网络图片路径或本地图片文件路径或相对代码包根目录的图片文件路径。	
-        *   query		查询字符串，必须是 key1=val1&key2=val2 的格式。从这条转发消息进入后，可通过 wx.onLaunch() 或 wx.onShow 获取启动参数中的 query。	
+        *   query		查询字符串，必须是 key1=val1&key2=val2 的格式。从这条转发消息进入后，可通过 onLaunch() 或 onShow 获取启动参数中的 query。	
         *   success		转发成功的回调函数	
         *   fail		转发失败的回调函数	
         *   complete	转发完成的回调函数
      */
 
     onShareAppMessage(object) {
-        if (isWeChat) {
-            wx.onShareAppMessage(object);
-        } else {
-            // console.log("it's not wechat platform. onShareAppMessage faied!");
-        }
     },
 
     /**
@@ -51,23 +32,13 @@ var ShareSdk = {
         * ShareOption-分享监听参数对象
         *  title		转发标题，不传则默认使用当前小游戏的昵称。	
         *   imageUrl	转发显示图片的链接，可以是网络图片路径或本地图片文件路径或相对代码包根目录的图片文件路径。	
-        *   query		查询字符串，必须是 key1=val1&key2=val2 的格式。从这条转发消息进入后，可通过 wx.onLaunch() 或 wx.onShow 获取启动参数中的 query。	
+        *   query		查询字符串，必须是 key1=val1&key2=val2 的格式。从这条转发消息进入后，可通过 onLaunch() 或 onShow 获取启动参数中的 query。	
         *   success(res)		转发成功的回调函数	res.shareTickets[0]成功转发参数
         *   fail		转发失败的回调函数	
         *   complete	转发完成的回调函数
      */
 
     shareAppMessage(object) {
-        if (isWeChat) {
-            if (typeof (object) != "object") { console.log("param 'object' is not a js object "); return; }
-            if (typeof (object.title) == "undefined") { console.log("param 'object' property title is undefined!"); return; }
-            // wx.showShareMenu({
-            //     withShareTicket: true,
-            // });
-            wx.shareAppMessage(object);
-        } else {
-            // console.log("it's not wechat platform. onShareAppMessage faied!");
-        }
     },
 
     /**
@@ -100,31 +71,6 @@ var ShareSdk = {
      * example: shareScoreMessage(10, "haha", "");
      */
     shareScoreMessage(score, title, url) {
-        if (isWeChat) {
-            // var shareCanvas = wx.createCanvas();
-            // shareCanvas.width = 668;
-            // shareCanvas.height = 501;
-            // var context = shareCanvas.getContext('2d');
-            // context.font = "bold 200px Verdana"; //粗体字
-            // context.fillStyle = "Black";
-            // context.textAlign = "center";
-            // context.clearRect(0, 0, shareCanvas.width, shareCanvas.height);
-            var self = this;
-            var scoreNum = score + "";
-            // var shareImg = wx.createImage();
-            // shareImg.src = cc.url.raw(url);
-            var shareTitle = title ? title : "本局得了" + scoreNum + "分，没有办法，我就是这么强大！";
-            // shareImg.onload = function () {
-            // context.drawImage(shareImg, 0, 0, shareCanvas.width, shareCanvas.height);
-            // let timeid = setTimeout(() => {
-            // let path = shareCanvas.toTempFilePathSysc();
-            wx.shareAppMessage({ title: shareTitle, imageUrl: cc.url.raw(url), });
-            // clearTimeout(timeid);
-            // }, 0.2);
-            // };
-        } else {
-            // console.log("it's not wechat platform. shareScoreMessage faied!");
-        }
     },
 
     /**
@@ -145,9 +91,6 @@ var ShareSdk = {
             }
             node.setPosition(posx, posy);
         }
-        else {
-            // console.log("it's not wechat platform. addRqCodeView faied!");
-        };
     },
 
     /**

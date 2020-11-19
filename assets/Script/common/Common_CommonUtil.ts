@@ -110,10 +110,7 @@ export default class Common_CommonUtil {
         if (cc.sys.isNative) {//内生平台
             return null;
         }
-        else if (Common_CommonUtil.isWeChat()) {//微信平台
-            let params = wx.getLaunchOptionsSync().query;
-            if (params.token && params.userId && params.gameId && params.serverHost)
-                return params;
+        else if (Common_CommonUtil.isWeChat()) {
             return null;
         }
         else//h5通过url获取
@@ -130,9 +127,6 @@ export default class Common_CommonUtil {
     static preview() {
         if (!Common_CommonUtil.isWeChat())
             return;
-        wx.previewImage({
-            urls: ["https://h5gameres.kuaiyugo.com/chatgame/cocos_games_res/images/codeImage.jpg"]
-        });
     }
 
     /**
@@ -201,14 +195,5 @@ export default class Common_CommonUtil {
 
         if (!sprite)
             throw new Error("CommonUtil.setSprite:  无法找到正确的Sprite");
-
-        let image = wx.createImage();
-        image.onload = function () {
-            let texture = new cc.Texture2D();
-            texture.initWithElement(image);
-            texture.handleLoadedTexture();
-            sprite.spriteFrame = new cc.SpriteFrame(texture);
-        };
-        image.src = imgUrl;
     }
 }
